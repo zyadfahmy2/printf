@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 				}
 
 			}
-			else if (*format == '%')
+			else
 			{
 				char c = '%';
 
