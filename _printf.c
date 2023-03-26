@@ -9,7 +9,6 @@ int _printf(const char *format, ...)
 {
 	va_list list;
 	int i = 0;
-	unsigned int noOfArguments;
 	int count = 0;
 
 	va_start(list, format);
@@ -20,7 +19,7 @@ int _printf(const char *format, ...)
 			format++;
 			if (*format == 'c')
 			{
-				char c = va_arg(list, char);
+				char c = va_arg(list, int);
 
 				write(1, &c, 1);
 				count++;
@@ -45,7 +44,6 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
-	va_start(list, noOfArguments);
 	va_end(list);
 	return (count);
 }
