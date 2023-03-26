@@ -2,19 +2,17 @@
 /**
  * _printf - this is a function similar to original printf
  * @format:this is the string to be printed
- *
  * Return: returns the number of characters printed
  */
 int _printf(const char *format, ...)
 {
 	va_list list;
-	int i = 0;
 	int count = 0;
 
 	va_start(list, format);
 	while (*format)
 	{
-		if (format[i] == '%')
+		if (*format == '%')
 		{
 			format++;
 			if (*format == 'c')
