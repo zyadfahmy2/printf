@@ -36,6 +36,12 @@ int _printf(const char *format, ...)
 				}
 
 			}
+			else if (*format == '%')
+			{
+				char c = '%';
+
+				write(1, &c, 1);
+			}
 		}
 		else
 		{
