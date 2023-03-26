@@ -41,6 +41,7 @@ int _printf(const char *format, ...)
 				char c = '%';
 
 				write(1, &c, 1);
+				count++;
 			}
 		}
 		else
